@@ -42,6 +42,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </head>
 
 <body>
+    <div class="stars" id="stars"></div>
+    <div class="floating-books" id="floatingBooks"></div>
+    <div class="mascot mascot-left">🎓</div>
+    <div class="mascot mascot-right">📚</div>
 
     <div class="container">
         <div class="card p-4">

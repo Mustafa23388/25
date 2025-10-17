@@ -269,4 +269,41 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    function createStars() {
+        const starsContainer = document.getElementById('stars');
+        if (!starsContainer) return;
+
+        const starCount = 50;
+        for (let i = 0; i < starCount; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.animationDuration = (Math.random() * 2 + 2) + 's';
+            starsContainer.appendChild(star);
+        }
+    }
+
+    function createFloatingBooks() {
+        const booksContainer = document.getElementById('floatingBooks');
+        if (!booksContainer) return;
+
+        const bookEmojis = ['📖', '📚', '📝', '✏️', '🎓', '🏆'];
+        const bookCount = 8;
+
+        for (let i = 0; i < bookCount; i++) {
+            const book = document.createElement('div');
+            book.className = 'book';
+            book.textContent = bookEmojis[Math.floor(Math.random() * bookEmojis.length)];
+            book.style.left = Math.random() * 100 + '%';
+            book.style.animationDelay = Math.random() * 10 + 's';
+            book.style.animationDuration = (Math.random() * 10 + 15) + 's';
+            booksContainer.appendChild(book);
+        }
+    }
+
+    createStars();
+    createFloatingBooks();
 });
