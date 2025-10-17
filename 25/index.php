@@ -111,15 +111,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Bootstrap JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <?php if (isset($success) && $success) { ?>
+        <script>window.showSuccessModal = true;</script>
+    <?php } ?>
     <script src="script.js"></script>
-
-    <script>
-        // Show modal after successful registration
-        <?php if (isset($success) && $success) { ?>
-            var myModal = new bootstrap.Modal(document.getElementById('ticketModal'));
-            myModal.show();
-        <?php } ?>
-    </script>
 
 </body>
 

@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputs = document.querySelectorAll('.form-control');
     const submitButton = document.querySelector('.btn-primary');
 
+    if (window.showSuccessModal) {
+        const modal = document.getElementById('ticketModal');
+        if (modal) {
+            const myModal = new bootstrap.Modal(modal);
+            myModal.show();
+        }
+    }
+
     inputs.forEach((input, index) => {
         input.addEventListener('focus', function() {
             this.classList.add('input-focused');
